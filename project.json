@@ -1,0 +1,12 @@
+{
+  "name": "solidity-budget-treasury",
+  "title": "Budgeted token treasury",
+  "contract": "BudgetTreasury",
+  "description": "Role-scoped ERC20 treasury with epoch budgets, recipient permissions and delayed administrator ownership.",
+  "args": [
+    "$TOKEN",
+    100,
+    "$ADMIN"
+  ],
+  "assumptions": "Only configured operators can spend, and only to approved recipients. Budgets reset on UTC-like epoch boundaries derived from block.timestamp. Owner can change permissions immediately; ownership transfers require acceptance. No arbitrary execution or emergency asset sweep."
+}
